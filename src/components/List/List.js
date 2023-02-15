@@ -4,6 +4,12 @@ import { data } from "../../data/data";
 export function List() {
   const [places, setPlases] = useState(data);
 
+  const removeEachPlace = (id) => {
+    let newPlaces = places.filter((item) => item.id !== id);
+
+    setPlases(newPlaces);
+  };
+
   return (
     <div>
       <div>
@@ -32,9 +38,23 @@ export function List() {
             <div>
               <p>{sourceLink}</p>
             </div>
+            <div>
+              <button onClick={() => removeEachPlace(id)}>
+                Remove this Place
+              </button>
+            </div>
           </div>
         );
       })}
+      <div>
+        <button
+          onClick={() => {
+            setPlases([]);
+          }}
+        >
+          Clean List
+        </button>
+      </div>
     </div>
   );
 }
