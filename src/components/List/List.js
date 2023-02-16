@@ -22,15 +22,8 @@ export function List() {
         <h1>List of {places.length} places to visit in INDIA</h1>
       </div>
       {places.map((item) => {
-        const {
-          id,
-          place,
-          img,
-          imgDescription,
-          placeDescription,
-          showMore,
-          sourceLink,
-        } = item;
+        const { id, place, img, imgDescription, placeDescription, showMore } =
+          item;
 
         return (
           <div key={id} className={s.container}>
