@@ -25,6 +25,7 @@ export function Carousel() {
       return images;
     });
   };
+
   return (
     <div className={s.container}>
       <div className={s.previous}>
