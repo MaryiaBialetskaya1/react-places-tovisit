@@ -1,3 +1,6 @@
+## Link to Project
+### https://maryiabialetskaya1.github.io/react-places-tovisit/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
