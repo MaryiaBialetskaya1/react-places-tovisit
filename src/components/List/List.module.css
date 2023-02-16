@@ -15,6 +15,7 @@ body {
 .placeHeader {
   font-family: "Satisfy", cursive;
   font-size: 35px;
+  color: white;
 }
 .placeImg {
   width: 250px;
