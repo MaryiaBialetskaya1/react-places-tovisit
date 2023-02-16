@@ -1,45 +1,70 @@
 import { useState } from "react";
 import { data } from "../../data/data";
+import s from "./List.module.css";
 
 export function List() {
   const [places, setPlases] = useState(data);
 
+  const [showText, setShowMore] = useState(false);
+  const showMoreLessText = (element) => {
+    element.showMore = !element.showMore;
+    setShowMore(!showText);
+  };
+
   const removeEachPlace = (id) => {
     let newPlaces = places.filter((item) => item.id !== id);
-
     setPlases(newPlaces);
   };
 
   return (
-    <div>
+    <div className={s.page}>
       <div>
         <h1>List of {places.length} places to visit in INDIA</h1>
       </div>
       {places.map((item) => {
-        const { id, place, img, imgDescription, placeDescription, sourceLink } =
-          item;
+        const {
+          id,
+          place,
+          img,
+          imgDescription,
+          placeDescription,
+          showMore,
+          sourceLink,
+        } = item;
 
         return (
-          <div key={id}>
-            <div>
-              <h1>
+          <div key={id} className={s.container}>
+            <div className={s.gridItem}>
+              <h2 className={s.placeHeader}>
                 {id}. {place}
-              </h1>
+              </h2>
             </div>
-            <div>
-              <img src={img} alt="place" />
+            <div className={s.gridItem}>
+              <div>
+                <img className={s.placeImg} src={img} alt="place" />
+              </div>
+              <div>
+                <p className={s.imgDescription}>{imgDescription}</p>
+              </div>
             </div>
-            <div>
-              <p>{imgDescription}</p>
+            <div className={s.gridItem}>
+              <p>
+                {showMore
+                  ? placeDescription
+                  : placeDescription.substring(0, 300) + "..."}
+                <button
+                  className={s.showMoreLessBtn}
+                  onClick={() => showMoreLessText(item)}
+                >
+                  {showMore ? "Show less" : "Show more"}
+                </button>
+              </p>
             </div>
-            <div>
-              <p>{placeDescription}</p>
-            </div>
-            <div>
-              <p>{sourceLink}</p>
-            </div>
-            <div>
-              <button onClick={() => removeEachPlace(id)}>
+            <div className={s.gridItemButton}>
+              <button
+                className={s.removeEachButton}
+                onClick={() => removeEachPlace(id)}
+              >
                 Remove this Place
               </button>
             </div>
@@ -48,6 +73,7 @@ export function List() {
       })}
       <div>
         <button
+          className={s.deleteAllButton}
           onClick={() => {
             setPlases([]);
           }}
