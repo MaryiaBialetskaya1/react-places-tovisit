@@ -30,7 +30,7 @@ export const data = [
     id: 4,
     place: "Rajasthan",
     img: "https://images.pexels.com/photos/5355764/pexels-photo-5355764.jpeg?auto=compress&cs=tinysrgb&w=800",
-    imgDescription: "Gadi Sagar Temple in Jaisalmer, Rajasthan",
+    imgDescription: "Gadi Sagar Temple in Jaisalmer",
     placeDescription:
       "Translated to Land of Kings, Rajasthan brims with remnants of the kings and queens of past centuries. Between its glittering palaces, stately forts, and lively festivals, this western state deserves a starring role in your trip to India.Jaipur, part of the Golden Triangle Tourist Circuit, which also includes Agra and New Delhi, is one of the top places to visit in Rajasthan. Dubbed TheParis of India, it's known for its characteristic pink buildings, lavish City Palace, and jewelry stores galore.",
     showMore: false,
@@ -84,7 +84,7 @@ export const data = [
     id: 10,
     place: "Ladakh",
     img: "https://images.unsplash.com/photo-1658077589571-3db75c68e53d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8TGFrZSUyMGFuZCUyMGJlYXV0aWZ1bCUyMG1vdW50YWluJTIwc2NlbmVyeSUyMGluJTIwTGFkYWtofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    imgDescription: "Lake and beautiful mountain scenery in Ladakh",
+    imgDescription: "Lake and beautiful mountain",
     placeDescription:
       "Situated amid the jagged crags of the Karakoram and Zanskar mountain ranges, Ladakh offers tourists the chance to immerse themselves in an awe-inspiring alpine desert. Driving around the region's winding roads comes with one incredible natural view after the next: plunging valleys, gushing rivers, snowcapped peaks, and more. Ladakh's enchanting capital, Leh, stands at 3,500 meters above sea level, so you'll want to spend at least a few days acclimating to the altitude before embarking on any strenuous activities.",
     showMore: false,

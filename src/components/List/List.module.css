@@ -1,35 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap");
+
 body {
-  background-image: linear-gradient(to bottom right, #305170, #6dfc6b);
+  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
 }
 .page {
   max-width: 1400px;
   margin: auto;
 }
-.container {
-  margin-top: 20px;
+.header {
+  color: #2b3a55;
+  font-family: "Montserrat", sans-serif;
+}
+.cardContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr 1fr;
-  grid-row-gap: 1em;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+.card {
+  display: grid;
 }
 .placeHeader {
-  font-family: "Satisfy", cursive;
-  font-size: 35px;
-  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  color: #434242;
 }
 .placeImg {
   width: 250px;
   height: 150px;
   object-fit: cover;
   object-position: center bottom;
-}
-.gridItem {
-  justify-self: start;
-  align-self: center;
-}
-.gridItemButton {
-  justify-self: end;
-  align-self: flex-end;
 }
 .imgDescription {
   font-size: 9px;
@@ -41,7 +41,6 @@ body {
   font-size: 18px;
   color: white;
 }
-
 .removeEachButton {
   appearance: none;
   background-color: #2ea44f;
@@ -90,6 +89,8 @@ body {
   box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
 }
 .deleteAllButton {
+  margin-top: 50px;
+  margin-bottom: 50px;
   align-items: center;
   appearance: none;
   background-image: radial-gradient(

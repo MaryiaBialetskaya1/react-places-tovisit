@@ -27,7 +27,7 @@ export function Carousel() {
   };
   return (
     <div className={s.container}>
-      <div>
+      <div className={s.previous}>
         <button onClick={showPreviousImage}>&lArr;</button>
       </div>
       <div>
@@ -38,7 +38,7 @@ export function Carousel() {
           <p>{imgDescription}</p>
         </div>
       </div>
-      <div>
+      <div className={s.previous}>
         <button onClick={showNextImage}>&rArr;</button>
       </div>
     </div>
